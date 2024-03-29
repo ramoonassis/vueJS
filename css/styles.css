@@ -1,0 +1,10 @@
+#app {
+  text-align: center;
+}
+.characters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.item img {
+    max-width: 300px;
+}
