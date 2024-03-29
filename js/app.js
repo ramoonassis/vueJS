@@ -53,11 +53,11 @@ const App = new Vue({
       alert(`O personagem ${username} recebeu um like!`);
     },
     remove(id) {
-      const list = this.characters
-      const result = list.filter(item => {
-        return item.id !== id
-      })
-      this.characters = result
+      const list = this.characters;
+      const result = list.filter((item) => {
+        return item.id !== id;
+      });
+      this.characters = result;
     },
     search() {
       if (this.searchName === "") {
@@ -66,7 +66,7 @@ const App = new Vue({
       const list = (this.characters = LIST);
 
       const result = list.filter((item) => {
-        return item.nome === this.searchName;
+        return item.nome.toLowerCase().includes(this.searchName.toLowerCase());
       });
 
       if (result.length <= 0) {
